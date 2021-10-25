@@ -1,0 +1,120 @@
+/* Start Globals */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;900&display=swap");
+:root {
+  --main-color: #2196f3;
+  --secondary-color: #2c4755;
+  --section-bgcolor: #f6f6f6;
+  --text-color: #444;
+  --text-height: 1.6;
+  --main-transition: 3s;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/*small screens*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px !important;
+  }
+  .head .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+/*meduium screens*/
+@media (min-width: 992px) {
+  .container {
+    width: 970px !important;
+  }
+  .head .container .links img {
+    display: block !important;
+    width: 300px !important;
+  }
+}
+/*large screens*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px !important;
+  }
+}
+/* End Globals */
+/* Start Header  */
+.head {
+  position: relative;
+  box-shadow: 0 0 10px #ddd;
+  background-color: white;
+}
+.head .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.head .container .logo {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+.head .container .nav {
+  display: flex;
+}
+.head .container .nav > li:hover {
+  background-color: #ececec;
+}
+
+.head .container .nav > li > a {
+  position: relative;
+  height: 70px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 18px;
+  transition: var(--main-transition);
+}
+
+/* Header Media & frams */
+@media (max-width: 768px) {
+  .head .container {
+    justify-content: center;
+  }
+  .head .container .logo {
+    font-size: 25px;
+  }
+  .head .container .nav > li > a {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
+/* End Header Media  */
+/* End Header  */
