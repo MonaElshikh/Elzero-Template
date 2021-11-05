@@ -1471,6 +1471,7 @@ a {
   color: white;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 25px;
 }
 @media (max-width: 1200px) {
   .discount .discount-content {
