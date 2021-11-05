@@ -23,7 +23,7 @@ body {
 body > a {
   width: fit-content;
   display: block;
-  background-color: var(--main-color);;
+  background-color: var(--main-color);
   padding: 10px 20px;
   border: solid 1px var(--main-color);
   border-radius: var(--main-radius);
@@ -1229,13 +1229,13 @@ a {
   left: 15px;
   font-weight: bold;
 }
-.prcing .pricing-content > section > footer {
+.prcing .pricing-content > section > .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
-.prcing .pricing-content > section > footer > a {
+.prcing .pricing-content > section > .footer > a {
   color: var(--main-color);
   display: block;
   width: fit-content;
@@ -1245,7 +1245,7 @@ a {
   font-weight: bold;
   transition: var(--main-transition);
 }
-.prcing .pricing-content > section > footer > a:hover {
+.prcing .pricing-content > section > .footer > a:hover {
   background-color: var(--main-color);
   color: white;
 }
@@ -1257,7 +1257,337 @@ a {
 }
 /* End Pricing Media  */
 /********************************************************* End pricing ****************************************************/
+/********************************************************** Start videos **********************************************************/
+.videos {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.videos .videos-content {
+  display: flex;
+  border: solid 1px #ccc;
+  background-color: #e2e2e2;
+}
+.videos .videos-content .left-panel {
+  background-color: white;
+  width: 40%;
+}
+.videos .videos-content .left-panel aside > .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+  padding: 5px 15px;
+}
+.videos .videos-content .left-panel aside > .title > h3 {
+  font-weight: 600;
+}
+.videos .videos-content .left-panel aside > ul li {
+  border-bottom: 1px solid #ccc;
+  padding: 20px 10px 10px;
+}
+.videos .videos-content .left-panel aside > ul li a {
+  display: block;
+  color: black;
+  margin-bottom: 15px;
+}
+.videos .videos-content .left-panel aside > ul li a:hover {
+  color: var(--main-color);
+}
+.videos .videos-content .left-panel aside > ul li span {
+  color: var(--text-color);
+}
+.videos .videos-content .right-panel {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.videos .videos-content .right-panel > img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+.videos .videos-content .right-panel > p {
+  background-color: white;
+  padding: 20px;
+  padding: 20px;
+  margin: 0;
+}
+@media (max-width: 1200px) {
+  .videos .videos-content {
+    flex-direction: column;
+  }
+  .videos .videos-content .left-panel {
+    width: 100%;
+  }
+}
+/********************************************************** End videos  **********************************************************/
+/*********************************************************** Start Stats ***********************************************************/
+.stats {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-image: url(/images/stats/stats.jpg);
+  background-size: cover;
+  position: relative;
+}
+.stats::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 255 255 / 95%);
+}
+.stats h2 {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 50px;
+  font-size: 35px;
+}
+.stats .stats-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+.stats .stats-content > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 30px 0;
+  gap: 15px;
+  box-shadow: 0 0 10px #ccc;
+  position: relative;
+  overflow: hidden;
+}
+.stats .stats-content > section::before,
+.stats .stats-content > section::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: 0.7s;
+}
+.stats .stats-content > section::before {
+  left: 0;
+  bottom: -100%;
+}
+.stats .stats-content > section::after {
+  right: 0;
+  top: -100%;
+}
+.stats .stats-content > section:hover::before {
+  bottom: 0;
+}
+.stats .stats-content > section:hover::after {
+  top: 0;
+}
+.stats .stats-content > section > span:first-of-type {
+  font-size: 30px;
+  font-weight: bold;
+}
+.stats .stats-content > section > span:last-of-type {
+  color: var(--main-color);
+  font-weight: bold;
+  font-style: italic;
+}
+/*********************************************************** End Stats ***********************************************************/
+/************************************************************ Start Discount  ************************************************************/
+.discount {
+  padding-bottom: var(--main-padding);
+}
+.discount .discount-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.discount .discount-content .discount-data {
+  flex-basis: 50%;
+  background-image: url(/images/discount/discount-background1.jpg);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.discount .discount-content .discount-data::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--main-color);
+  opacity: 0.8;
+}
+.discount .discount-content .discount-data > h3,
+.discount .discount-content .discount-data > p {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.discount .discount-content .discount-data > h3 {
+  font-size: 30px;
+}
+.discount .discount-content .discount-data > p {
+  position: relative;
+  line-height: var(--text-height);
+  padding: 20px;
+  margin: 0;
+}
+.discount .discount-content .discount-data > img {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+}
+.discount .discount-content .discount-form {
+  flex-basis: 50%;
+}
+.discount .discount-content .discount-form > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.discount .discount-content .discount-form > form > h3 {
+  font-size: 30px;
+}
+.discount .discount-content .discount-form > form > input,
+.discount .discount-content .discount-form > form > textarea,
+.discount .discount-content .discount-form > form > a {
+  margin: 10px 0;
+  width: 60%;
+}
+.discount .discount-content .discount-form > form > input,
+.discount .discount-content .discount-form > form > textarea {
+  border: none;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-bottom: solid 1px #ccc;
+}
+.discount .discount-content .discount-form > form > a {
+  display: block;
+  padding: 20px 50px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .discount .discount-content {
+    flex-direction: column;
+  }
+  .discount .discount-content .discount-data,
+  .discount .discount-content .discount-form {
+    flex-basis: 100%;
+  }
+}
 
+/************************************************************ End Discount  ************************************************************/
+/************************************************************* Start Footer *************************************************************/
+footer {
+  background-color: #191919;
+  color: white;
+  padding-top: calc(var(--main-padding) - 30px);
+  padding-bottom: calc(var(--main-padding) - 30px);
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+.footer-content > section:nth-child(1) > h3 {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0 0 15px;
+}
+.footer-content > section:nth-child(1) > ul {
+  display: flex;
+  align-items: center;
+}
+.footer-content > section:nth-child(1) > ul li {
+  margin-right: 10px;
+}
+.footer-content > section:nth-child(1) > ul li a {
+  background-color: #313131;
+  color: #b9b9b9;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.footer-content > section:nth-child(1) > ul li:not(:nth-child(3)) a:hover {
+  background-color: var(--main-color);
+}
+.footer-content > section:nth-child(1) > ul li:nth-child(3) a:hover {
+  background-color: red;
+}
+.footer-content > section:nth-child(1) > p {
+  line-height: var(--text-height);
+  color: #b9b9b9;
+}
+
+.footer-content > section:nth-child(2) > ul li {
+  border-bottom: solid 1px #444;
+}
+.footer-content > section:nth-child(2) > ul li a {
+  color: #b9b9b9;
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+  transition: var(--main-transition);
+}
+.footer-content > section:nth-child(2) > ul li a::before {
+  content: "\F101";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10 px;
+  color: var(--main-color);
+  left: 0px;
+  margin-right: 10px;
+}
+.footer-content > section:nth-child(2) > ul li a:hover {
+  transform: translateX(10px);
+}
+.footer-content > section:nth-child(3) > ul li {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.footer-content > section:nth-child(3) > ul li i {
+  padding-right: 10px;
+  color: var(--main-color);
+  font-size: 20px;
+}
+.footer-content > section:nth-child(3) > ul li span {
+  display: block;
+  line-height: var(--text-height);
+}
+.footer-content .footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+  gap: 10px;
+}
+.footer-content .footer-gallery > img {
+  width: 75px;
+  max-width: 100%;
+  border: 5px solid white;
+}
+footer > h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 20px;
+  border-top: solid 1px #b9b9b9;
+  margin: 0;
+}
+/************************************************************* End Footer  *************************************************************/
 /******************************************************** Start All Animation ******************************************/
 /* special-text */
 @keyframes move-right {
